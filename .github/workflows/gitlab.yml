@@ -5,7 +5,7 @@ on:
       - main
   push:
 jobs:
-  build:
+  test-compile:
     runs-on: windows-latest
     defaults:
       run:
