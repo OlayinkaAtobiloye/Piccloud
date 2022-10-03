@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: Spring Boot Rest API
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;INIT=CREATE SCHEMA IF NOT EXISTS dbo\\;CREATE TABLE IF NOT EXISTS piccloud (
+                         id varchar(255),
+                         file_name varchar(255),
+                         date_created date,
+                         image bit
+);DATABASE_TO_UPPER=false;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false;MODE=MSSQLServer"
+    name:
+    password:
+    username:
+    hikari:
+      schema: dbo
+  jpa:
+    database: H2
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  test:
+    database:
+      replace: none
+  sql:
+    init:
+      mode: never
