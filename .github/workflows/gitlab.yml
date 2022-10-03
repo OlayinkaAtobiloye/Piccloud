@@ -13,8 +13,8 @@ jobs:
         with:
           java-version: 1.11
       - name: Setup
-        working-directory: ./backend
-      - run: cd backend
+        run:
+          working-directory: ./backend
       - name: Build with Maven
         run: mvn -B build
       - name: Test with Maven
@@ -26,8 +26,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Setup Symfony
-        working-directory: ./frontend
+      - name: Setup
+        run:
+          working-directory: ./frontend
       - run: npm install
       - run: npm run test
       - run: npm run build
