@@ -14,7 +14,6 @@ jobs:
           java-version: 1.11
       - name: Setup
         working-directory: ./backend
-        run: cp .env.dev .env
       - run: cd backend
       - name: Build with Maven
         run: mvn -B build
@@ -29,7 +28,6 @@ jobs:
           node-version: '16'
       - name: Setup Symfony
         working-directory: ./frontend
-        run: cp .env.dev .env
       - run: npm install
       - run: npm run test
       - run: npm run build
