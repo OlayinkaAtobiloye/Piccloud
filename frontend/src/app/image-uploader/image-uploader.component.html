@@ -1,0 +1,21 @@
+  <div class="card" *ngIf="true">
+    <container>
+    <p class="cta">Upload your image</p>
+    <p class="further-info">File should be Jpeg, Png,...</p>
+    
+    <div class="drag-and-drop">
+      <div class="drag-and-drop__prompt">
+        <img src="assets/drag-and-drop.svg"/>
+        <p >Drag & Drop your image here</p>
+      </div>
+    </div>
+    
+    <p class="or">or</p>
+    <label for="image" class="submit">Choose a file</label>
+    <input class="drag-and-drop__input" type="file" accept="image" id="image" hidden/>
+    </container>
+    </div>
+  
+  
+    <!-- <app-loader *ngIf="loading"></app-loader> -->
+  

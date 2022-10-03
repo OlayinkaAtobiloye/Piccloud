@@ -1,0 +1,49 @@
+img{
+    width: 338px;
+height: 224.4px;
+border-radius: 12px;
+object-fit: cover;
+margin-bottom: 16px;
+}
+
+p{
+    margin-bottom: 16px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  .imageLink{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 8px;
+    position: relative;
+    height: 30px;
+    background: #F6F8FB;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+
+  }
+
+  .imageLink > button{
+    border-style: none;
+height: inherit;
+background: #2F80ED;
+border-radius: 8px;
+color: #ffffff;
+position: absolute;
+right: 0%;
+padding: 8px;
+  }
+
+span{
+    color: #219653;
+    margin-bottom: 8px;
+}

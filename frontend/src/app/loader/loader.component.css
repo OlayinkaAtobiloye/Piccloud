@@ -1,0 +1,50 @@
+.loader-container{
+width: 100%;
+height: 6px;
+background: #F2F2F2;
+border-radius: 8px;
+position: relative;
+overflow: hidden;
+}
+
+@keyframes spin {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(100%); }
+  }
+
+  .loader-wrapper{
+    animation: spin 2s linear infinite;
+    /* position: absolute; */
+    width: 100%;
+    position: absolute;
+    height: 6px;
+    transition: all 2s;
+    transform: translateX(100%);
+  }
+
+    .loader{
+    width: 20%;
+    height: 6px;
+    background: #2F80ED;
+    border-radius: 8px;
+    transform: translateX(-100%);
+    transition: inherit;
+    position: absolute;
+    }
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+.card__loader{
+    width: 40vw;
+}
+
+p {
+    margin-bottom: 16px;
+    text-align: left;
+}
