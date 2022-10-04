@@ -5,7 +5,7 @@ on:
       - main
   push:
 jobs:
-  test-compile:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:

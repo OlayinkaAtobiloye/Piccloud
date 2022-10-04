@@ -8,7 +8,7 @@
   
   .cta{
     font-family: Poppins;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 27px;
     letter-spacing: -0.035em;
@@ -18,12 +18,14 @@
   
   .further-info{
     font-family: Poppins;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 15px;
     letter-spacing: -0.035em;
     text-align: center;
     margin-bottom: 12px;
+    font-family: Poppins;
+
   }
   
   .or{
@@ -68,7 +70,6 @@
   }
   
   .submit{
-    width: 100px;
     padding: 8px;
     background: #2F80ED;
     border-radius: 8px;

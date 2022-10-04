@@ -8,20 +8,18 @@ import { ImageUploaderService } from '../services/image-uploader.service';
   styleUrls: ['./success.component.css']
 })
 export class SuccessComponent implements OnInit {
-  imageLink: string = "https://piccloud.netlify.app";
+  imageLink: string = "https://piccloud.netlify.app/";
   imageId: string = "";
   retrievedImage = "";
 
   constructor(private activatedRoute: ActivatedRoute, private imageUploader: ImageUploaderService) {
-    this.imageId = this.activatedRoute.snapshot.paramMap.get("id")!;
-    
-  
     
   }
   
 
   ngOnInit(): void {
-    console.log(this.imageId);
+    this.imageId = this.activatedRoute.snapshot.paramMap.get("id")!;
+    this.imageLink += this.imageId;
     this.imageUploader.getImage(this.imageId).subscribe(
       res => {
         const base64Data = res.image;

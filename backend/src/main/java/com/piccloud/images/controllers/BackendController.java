@@ -22,7 +22,8 @@ public class BackendController {
 
     @GetMapping("/")
     public String index(){
-       return "App runs successfully!";
+        // Health Check
+        return "Welcome to Piccloud! This service is up and running!";
     }
 
     @PostMapping(value = "/images", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })

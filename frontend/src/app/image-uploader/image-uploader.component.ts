@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ImageResponse } from '../models/image';
 import { ImageUploaderService } from '../services/image-uploader.service';
 
 
@@ -11,29 +13,31 @@ import { ImageUploaderService } from '../services/image-uploader.service';
 export class ImageUploaderComponent implements OnInit {
   image: File  = new File([], "");
   file_name: string = "";
-  loading: boolean = false;
+  loading?: boolean = false;
 
-  constructor(private imageUploader: ImageUploaderService) {
+  constructor(private imageUploader: ImageUploaderService, private router: Router) {
+  
   }
 
   uploadImage(){
-    console.log(12)
     const form = new FormData();
     form.append("image", this.image);
     form.append("file_name", this.file_name);
     this.loading = true;
     this.imageUploader.uploadImage(form).subscribe(
-      (data) => {
-          this.loading = false;
-
+      (data: ImageResponse) => {
+          this.router.navigate([data.id]);
       }
     )
   }
 
+ngOnInit(): void{
 
-  ngOnInit(): void {
+}
+
+  ngAfterViewInit(): void {
     const dropZoneInput: HTMLInputElement = document.querySelector(".drag-and-drop__input") as HTMLInputElement;
-    const dropZoneElement: HTMLElement = document.querySelector(".drag-and-drop")! as HTMLElement;
+    const dropZoneElement: HTMLElement = document.querySelector(".drag-and-drop") as HTMLElement;
     dropZoneElement.addEventListener("dragover", (e: DragEvent) => {
       e.preventDefault();
       dropZoneElement.classList.add("drop-zone--over");

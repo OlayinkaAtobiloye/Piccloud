@@ -1,4 +1,4 @@
-  <div class="card" *ngIf="true">
+  <div class="card" *ngIf="!loading">
     <container>
     <p class="cta">Upload your image</p>
     <p class="further-info">File should be Jpeg, Png,...</p>
@@ -17,5 +17,5 @@
     </div>
   
   
-    <!-- <app-loader *ngIf="loading"></app-loader> -->
+    <loader *ngIf="loading"></loader>
   

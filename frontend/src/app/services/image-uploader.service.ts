@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ImageResponse } from '../models/image';
+import { isDevMode } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ImageUploaderService {
-  baseURL = "https://localhost:8080"
+  baseURL = isDevMode() ? "http://localhost:8080" : "https://piccloud.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   uploadImage(form: FormData){
