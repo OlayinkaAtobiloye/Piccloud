@@ -1,0 +1,110 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  
+  .cta{
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .further-info{
+    font-family: Poppins;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    margin-bottom: 12px;
+    font-family: Poppins;
+
+  }
+  
+  .or{
+    font-family: Poppins;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    color: #BDBDBD;
+    margin-bottom: 12px;
+  }
+
+  .drag-and-drop--over {
+    border-style: solid;
+  }
+  
+  
+  .drag-and-drop{
+    height: 218.90283203125px;
+    width: 338px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px dashed #97BEF4;
+    padding: 32px;
+  }
+  
+  .drag-and-drop img{
+    height: auto;
+    width: 30%;
+    margin-bottom: 32px;
+  }
+  
+  .drag-and-drop p{
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    color: #BDBDBD;
+  }
+  
+  .submit{
+    padding: 8px;
+    background: #2F80ED;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .drop-and-drop__input {
+    display: none;
+  }
+
+  ::ng-deep .drag-and-drop__thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  ::ng-deep .drag-and-drop__thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+  }
+  

@@ -38,7 +38,7 @@ class BackendControllerTest {
 
     @Test
     void index() {
-        assertEquals("App runs successfully!", backendController.index());
+        assertEquals("Welcome to Piccloud! This service is up and running!", backendController.index());
     }
 
     @Test
