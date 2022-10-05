@@ -6,7 +6,7 @@
 
 #### Java 17
 
-Follow instructions to install the latest version of python for your platform in the [Oracle docs](https://www.oracle.com/java/technologies/downloads/).
+Follow instructions to install the latest version of Java for your platform in the [Oracle docs](https://www.oracle.com/java/technologies/downloads/).
 
 #### Maven Dependencies
 
