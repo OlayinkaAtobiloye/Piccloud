@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ImageUploaderService } from '../services/image-uploader.service';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-success',
@@ -9,19 +10,19 @@ import { ImageUploaderService } from '../services/image-uploader.service';
 })
 export class SuccessComponent implements OnInit {
   imageLink: string = "https://piccloud.netlify.app/";
-  imageId: string = "";
+  @Input() imageId: string = "";
   retrievedImage = "";
 
-  constructor(private activatedRoute: ActivatedRoute, private imageUploader: ImageUploaderService) {
+  constructor(private activatedRoute: ActivatedRoute, private imageUploader: ImageUploaderService, private clipboard: Clipboard) {
     
   }
   
 
   ngOnInit(): void {
-    this.imageId = this.activatedRoute.snapshot.paramMap.get("id")!;
     this.imageLink += this.imageId;
     this.imageUploader.getImage(this.imageId).subscribe(
       res => {
+        console.log(this.imageId);
         const base64Data = res.image;
         this.retrievedImage = 'data:image/jpeg;base64,' + base64Data;
       }
@@ -32,7 +33,7 @@ export class SuccessComponent implements OnInit {
 
   copyLink() {
      // Copy the text inside the text field
-    navigator.clipboard.writeText(this.imageLink);
+     this.clipboard.copy(this.imageLink);
     // Alert the copied text
     alert("Copied the text: " + this.imageLink);
   }

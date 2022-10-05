@@ -78,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
   
   .drop-and-drop__input {

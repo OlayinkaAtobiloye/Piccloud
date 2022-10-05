@@ -1,0 +1,40 @@
+img{
+    width: 338px;
+height: 224.4px;
+border-radius: 12px;
+object-fit: cover;
+margin-bottom: 16px;
+}
+
+p{
+    margin-bottom: 16px;
+    font-size: 0.75rem;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  
+  a{
+    border-style: none;
+    height: inherit;
+    background: #2F80ED;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+span{
+    color: #219653;
+    margin-bottom: 8px;
+}

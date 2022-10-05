@@ -1,16 +1,16 @@
 img{
     width: 338px;
-height: 224.4px;
-border-radius: 12px;
-object-fit: cover;
-margin-bottom: 16px;
-}
-
-p{
+    height: 224.4px;
+    border-radius: 12px;
+    object-fit: cover;
     margin-bottom: 16px;
 }
 
-.card{
+  p{
+    margin-bottom: 16px;
+  }
+
+  .card{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ p{
   }
 
   .imageLink{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     text-align: left;
@@ -30,24 +30,26 @@ p{
     border: 1px solid #E0E0E0;
     border-radius: 8px;
     font-size: 0.5rem;
-
+    overflow: hidden;
   }
 
   .imageLink > button{
     border-style: none;
-height: inherit;
-background: #2F80ED;
-border-radius: 8px;
-color: #ffffff;
-position: absolute;
-right: 0%;
-padding: 8px;
-display: flex;
+    height: inherit;
+    background: #2F80ED;
+    border-radius: 8px;
+    color: #ffffff;
+    position: absolute;
+    right: 0%;
+    padding: 8px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
-span{
-    color: #219653;
-    margin-bottom: 8px;
-}
+  span{
+      color: #219653;
+      margin-bottom: 8px;
+      margin: 0;
+  }

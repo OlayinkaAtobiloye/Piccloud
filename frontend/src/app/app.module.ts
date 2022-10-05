@@ -8,6 +8,7 @@ import { ContainerComponent } from './container/container.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SuccessComponent } from './success/success.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ImageUploaderComponent,
     ContainerComponent,
     LoaderComponent,
-    SuccessComponent
+    SuccessComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,
