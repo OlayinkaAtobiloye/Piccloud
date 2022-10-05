@@ -14,6 +14,8 @@ export class ImageUploaderComponent implements OnInit {
   image: File  = new File([], "");
   file_name: string = "";
   loading?: boolean = false;
+  imageId: string = "";
+  success: boolean = false;
 
   constructor(private imageUploader: ImageUploaderService, private router: Router) {
   
@@ -25,8 +27,15 @@ export class ImageUploaderComponent implements OnInit {
     form.append("file_name", this.file_name);
     this.loading = true;
     this.imageUploader.uploadImage(form).subscribe(
-      (data: ImageResponse) => {
-          this.router.navigate([data.id]);
+      {
+        next: (data: ImageResponse) => {
+          // this.router.navigate([data.id]);
+          this.success = true;
+          this.imageId = data.id;
+      },
+      error: (err) => {
+        this.router.navigate(["/"]);
+      }
       }
     )
   }

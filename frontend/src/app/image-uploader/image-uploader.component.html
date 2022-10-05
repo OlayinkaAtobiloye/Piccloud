@@ -1,4 +1,4 @@
-  <div class="card" *ngIf="!loading">
+  <div class="card" *ngIf="!loading && !success">
     <container>
     <p class="cta">Upload your image</p>
     <p class="further-info">File should be Jpeg, Png,...</p>
@@ -15,7 +15,6 @@
     <input class="drag-and-drop__input" type="file" accept="image" id="image" hidden/>
     </container>
     </div>
-  
-  
-    <loader *ngIf="loading"></loader>
+    <loader *ngIf="loading && !success"></loader>
+    <app-success *ngIf="success" [imageId]="imageId"></app-success>
   
