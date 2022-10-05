@@ -25,7 +25,7 @@ The `./backend` directory contains a completed Spring Bootk application. You wou
 
 The `./frontend` directory contains a completed Angular web application that consumes the data from the Spring Boot server. You would also need to set up some environment variables to run the frontend application successfully.
 
-[Find the steps to set up the front-end web application locally in the front-end's README](./frontend/README.md)/
+[Find the steps to set up the front-end web application locally in the front-end's README](./frontend/README.md).
 
 ## Author
 
